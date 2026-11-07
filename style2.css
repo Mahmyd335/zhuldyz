@@ -1,0 +1,745 @@
+@media (max-width: 500px) {	
+
+	.con-section-gos {
+	  touch-action: pan-x pan-y;
+	  overflow-x: hidden;
+	  overflow-y: hidden;
+	}
+
+    .con-gos{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:white;
+        z-index:330;
+
+        transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+	.number7 {
+		position: absolute;
+		width: 2.1vw;
+		left: 51.9vw;
+		z-index: 100;
+		top: 37.6vh;
+		opacity: 1;
+	}
+
+    .con-gos.show {
+        left: 0;
+    }
+
+	.header-gos {
+		width: 100vh;
+		height: 12.3vh;
+		position: relative;
+		background: white;
+		border-bottom: 0.35vh solid #d9d9d9;
+		top: 0;
+		z-index: 1;
+
+		display: flex;
+		justify-content: center;
+	}
+
+	.header-section-gos {
+		width: 90%;
+		height: 100%;
+		position: relative;
+		background: white;
+	}
+
+	.header-section1-gos {
+		width: 100%;
+		height: 5vh;
+		background: white;
+		position: relative; 
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-gos img {
+		position: absolute;
+		left: 0;
+		width: 9vw;
+	}
+
+	.header-gos p {
+		font-size: 4vw;
+		color: black;
+		font-weight: 500;
+	}
+
+	.header-section2-gos {
+		width: 100%;
+		height: 7vh;
+		position: relative;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.header-block-gos {
+		width: 100%;
+		height: 4.5vh;
+		background: #ebebeb;
+		border-radius: 2vw;
+
+		display: flex;
+		align-items: center;
+	}
+
+	.block1-gos, .block2-gos {
+		transition: background 0.2s ease, transform 0.12s ease;
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.block1-gos:active, .block2-gos:active {
+		transform: scale(0.97);
+	}
+	.block1-gos {
+		width: 50%;
+		height: 87%;
+		background: white;
+		position: relative;
+		left: 0.5vw;
+		border-radius: 2vw;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: black;
+		font-size: 3.5vw;
+	}
+
+	.block2-gos {
+		width: 50%;
+		height: 87%;
+		background: rgba(211, 211, 211, 0.0);
+		position: relative;
+		right: 0.5vw;
+		border-radius: 2vw;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: black;
+		font-size: 3.5vw;
+	}
+
+	.con-section-gos {
+		width: 100%;
+		height: 60vh;
+		background: white;
+		position: absolute;
+		top: 17vh;
+	}
+
+	.con-section-gos img {
+		width: 90%;
+		position: relative;
+		left: 5%;
+	}
+
+	.footer-gos {
+		width: 100%;
+		height: 17vh;
+		position: absolute;
+		bottom: 2vh;
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-btn1-gos, .footer-btn2-gos {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 0.12s ease, opacity 0.12s ease;
+	}
+	.footer-btn1-gos:active, .footer-btn2-gos:active {
+		transform: scale(0.97);
+		opacity: 0.85;
+	}
+	.footer-btn1-gos {
+		width: 90%;
+		position: absolute;
+		height: 7vh;
+		border-radius: 3vw;
+		background: #0089CF;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: white;
+		font-weight: 400;
+	}
+
+	.footer-btn1-gos img {
+		width: 5vw;
+		position: relative;
+		left: -2vw;
+	}
+
+	.footer-btn2-gos {
+		width: 90%;
+		position: absolute;
+		bottom: 1.5vh;
+		height: 7vh;
+		border-radius: 3vw;
+		background: white;
+		border: 0.8vw solid #0089CF;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: #0089CF;
+		font-weight: 400;
+	}
+
+	.footer-btn2-gos img {
+		width: 6vw;
+		position: relative;
+		left: -4vw;
+	}
+
+	.window-gos {
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.35);
+		position: absolute;
+		z-index: 2;
+
+		display: flex;
+		justify-content: center;
+
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.window-gos.active {
+		animation: windowAnim 0.5s ease forwards;
+		pointer-events: auto;
+	}
+
+	@keyframes windowAnim {
+		from { top: 5vh; opacity: 0; }
+		to   { top: 0;   opacity: 1; }
+	}
+
+	.window-block-gos {
+		width: 100%;
+		height: 43vh;
+		border-radius: 5vw;
+		background: white;
+		position: absolute;
+		bottom: 0;
+
+		display: flex;
+		justify-content: center;
+	}
+
+	.text1-gos {
+		font-size: 4.5vw;
+		position: absolute;
+		left: 5vw;
+		top: 0.5vh;
+		color: black;
+		font-weight: 600;
+	}
+
+	.text2-gos {
+		font-size: 4vw;
+		position: absolute;
+		top: 5.5vh;
+		color: black;
+		font-weight: 400;
+	}
+
+	.wind-img1-gos {
+		position: absolute;
+		width: 50vw;
+		top: 8.5vh;
+	}
+
+	.wind-img2-gos {
+		position: absolute;
+		right: 5vw;
+		top: 2vh;
+		width: 7vw;
+	}
+
+	.text3-gos {
+		font-size: 4vw;
+		position: absolute;
+		bottom: 7.5vh;
+		color: black;
+		font-weight: 400;
+	}
+
+	.text4-gos {
+		font-size: 5.25vw;
+		position: absolute;
+		bottom: 3.5vh;
+		color: black;
+		font-weight: 600;
+	}
+
+	.section2-gos {
+		width: 100%;
+		height: 87.2vh;
+		background: white;
+		position: absolute;
+		bottom: 0;
+		display: none;
+	}
+
+	.section2-block-gos {
+		width: 100%;
+		height: 7.5vh;
+		position: relative;
+
+		display: flex;
+		align-items: center;
+	}
+
+	.block-text1-gos {
+		font-size: 3vw;
+		left: 5%;
+		position: absolute;
+		top: 0.3vh;
+		color: grey;
+		font-weight: 400;
+	}
+
+	.block-text2-gos {
+		font-size: 4.25vw;
+		left: 5%;
+		position: absolute;
+		color: black;
+		top: 2.4vh;
+	}
+
+	.section2-block-gos img {
+		width: 4vw;
+		position: absolute;
+		right: 5%;
+	}
+
+
+    /* белый экран */
+
+    .loader-screen{
+        position: fixed;
+        top:0;
+        left:100vw;
+        width:100%;
+        height:100vh;
+        background:white;
+        z-index:310;
+        transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .loader-screen.show{
+        left:0;
+    }
+
+    /* красная полоска */
+
+    .loader-bar{
+        position:absolute;
+        top:0;
+        left:0;
+        height:4px;
+        width:0%;
+        background:red;
+        transition:width 1s linear;
+    }
+
+    /* промежуточная секция */
+
+    .pre-section{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100vh;
+        background:white;
+        z-index:320;
+        display:none;
+    }
+
+    /* основная страница */
+
+    .con-gos{
+        width:100%;
+        height:100vh;
+        position:fixed;
+        top:0;
+        left:100vw;
+        z-index:330;
+        background:white;
+
+        display:flex;
+        justify-content:center;
+
+        transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .con-gos.show{
+        left:0;
+    }
+
+    .pre-section div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pre-section img {
+        position: relative;
+        width: 90%;
+    }
+
+    .pre-section p {
+        font-size: 3.5vw;
+        font-weight: 400;
+        color: #a0a0a0;
+        position: absolute;
+        bottom: 7vh;
+        width: 55vw;
+        text-align: center;
+    }
+
+    .header-section1-gos img {
+        transform: rotate(180deg);
+        width: 5vw;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 0.12s ease, opacity 0.12s ease;
+    }
+    .header-section1-gos img:active {
+        transform: rotate(180deg) scale(0.85);
+        opacity: 0.6;
+    }
+
+	.con-section-gos img {
+		border-radius: 1.4vw;
+	}
+
+	.section2-block-gos input {
+		border: none;
+		margin-top: 4vw;
+		width: 80vw;
+		background: transparent;
+		color: #000;
+	}
+
+	.section2-block-gos input:focus {
+		outline: none;
+	}
+
+	.section2-block-gos input[readonly] {
+		user-select: all;
+		cursor: default;
+	}
+
+	.section2-block-gos img {
+		cursor: pointer;
+		transition: transform 0.12s ease, opacity 0.12s ease;
+	}
+
+	.section2-block-gos img:active {
+		transform: scale(0.85);
+		opacity: 0.6;
+	}
+
+	#docImg1 {
+		width: 90%;
+		max-height: 58vh;
+		object-fit: contain;
+		position: relative;
+		left: 5%;
+		border-radius: 2.5vw;
+		box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+		user-select: none;
+		-webkit-user-select: none;
+		pointer-events: auto;
+		display: block;
+	}
+
+	.input1 {
+		position: absolute;
+		top: 20vh;
+		left: 20vw;
+	}
+
+	.input2 {
+		position: absolute;
+		top: 40vh;
+		left: 20vw;
+	}
+
+
+
+
+
+
+
+
+}
+/* ===== вставка фото документов ===== */
+.doc-slot {
+	width: 100%;
+	margin-bottom: 3vw;
+}
+
+.doc-add-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1vw;
+	width: 90%;
+	aspect-ratio: 1.58 / 1;
+	margin: 0 auto;
+	border: 0.5vw dashed #b5b5b5;
+	border-radius: 1.4vw;
+	background: #f4f4f4;
+	color: #666;
+	font-size: 4vw;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+.doc-add-plus {
+	font-size: 10vw;
+	line-height: 1;
+}
+
+.doc-slot img {
+	display: block;
+	height: auto;
+	cursor: default;
+}
+
+/* ===== СТРАНИЦА СТУДЕНЧЕСКОГО БИЛЕТА ===== */
+.con-student {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 330;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    padding-bottom: 2.5vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.con-student.show {
+    left: 0;
+}
+
+.header-student {
+    width: 100%;
+    height: 7.5vh;
+    position: relative;
+    background: white;
+    border-bottom: 0.15vh solid #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-section-student {
+    width: 90%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section-student img {
+    position: absolute;
+    left: 0;
+    width: 5vw;
+    max-width: 22px;
+    transform: rotate(180deg);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.12s ease, opacity 0.12s ease;
+}
+.header-section-student img:active {
+    transform: rotate(180deg) scale(0.85);
+    opacity: 0.6;
+}
+
+.header-section-student p {
+    font-size: 4.4vw;
+    font-weight: 500;
+    color: #111;
+    letter-spacing: -0.2px;
+}
+
+.con-section-student {
+    width: 90%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5vh 0;
+    min-height: 0;
+}
+
+.student-slot {
+    width: 100%;
+    height: 100%;
+    max-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-photo-wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.student-add-btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+    border: 0.5vw dashed #b5b5b5;
+    border-radius: 3.5vw;
+    background: #f7f7f8;
+    color: #666;
+    font-size: 4.2vw;
+    font-family: inherit;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background 0.15s ease;
+}
+
+.student-add-btn:active {
+    background: #ebebeb;
+}
+
+.student-add-plus {
+    font-size: 10vw;
+    line-height: 1;
+    color: #888;
+}
+
+#studentDocImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3.5vw;
+    display: block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+.footer-student {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.footer-btn1-student {
+    width: 100%;
+    height: 6.8vh;
+    border-radius: 3.2vw;
+    background: #0089CF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+    color: white;
+    font-size: 4.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity 0.1s ease;
+}
+
+.footer-btn1-student:active {
+    opacity: 0.85;
+}
+
+.footer-btn1-student img {
+    width: 5.5vw;
+    max-width: 24px;
+    height: auto;
+}
+
+.footer-btn2-student {
+    width: 100%;
+    height: 6.8vh;
+    border-radius: 3.2vw;
+    background: white;
+    border: 0.6vw solid #0089CF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+    color: #0089CF;
+    font-size: 4.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: opacity 0.1s ease;
+}
+
+.footer-btn2-student:active {
+    opacity: 0.85;
+}
+
+.footer-btn2-student img {
+    width: 6vw;
+    max-width: 26px;
+    height: auto;
+}
+
+.con-student .window-gos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 400;
+}
+
